@@ -1,0 +1,25 @@
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+
+import javax.swing.JFrame;
+
+public class DrawImageTest extends JFrame {
+	Toolkit tk = Toolkit.getDefaultToolkit();
+	//Image img = tk.getImage(this.getClass().getResource("/abc.jpg"));
+	Image img = tk.getImage(this.getClass().getResource("/abc.jpg"));
+	public DrawImageTest() {
+		super("Graphicsœ‘ æÕºœÒ≤‚ ‘");
+		setSize(420,584);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	@Override
+	public void paint(Graphics g) {
+		g.drawImage(img,0,0,410,574,this);
+	}
+	public static void main(String[] args) {
+		DrawImageTest g = new DrawImageTest();
+	}
+}
